@@ -280,23 +280,23 @@
 <span class="co">#&gt; List of 3</span>
 <span class="co">#&gt;  $ t             : int [1:7300] 1 2 3 4 5 6 7 8 9 10 ...</span>
 <span class="co">#&gt;  $ unit          : chr "day"</span>
-<span class="co">#&gt;  $ reference_date: Date[1:1], format: "2020-05-02"</span>
+<span class="co">#&gt;  $ reference_date: Date[1:1], format: "2020-05-13"</span>
 <span class="co">#&gt;  - attr(*, "class")= chr [1:2] "day" "time"</span>
 
 <span class="no">decline_predict_exp</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/decline_predict.html">decline_predict</a></span>(<span class="no">dcl_param_exp</span>, <span class="no">decline_time_exp</span>)
 
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">decline_predict_exp</span>, <span class="fl">10</span>)
 <span class="co">#&gt;          Date Time_(day) q_(bbl/day)   Q_(bbl) D_(1/day) Beta</span>
-<span class="co">#&gt; 1  2020-05-02          1    998.5011  999.2504    0.0015    0</span>
-<span class="co">#&gt; 2  2020-05-03          2    997.0045 1997.0030    0.0015    0</span>
-<span class="co">#&gt; 3  2020-05-04          3    995.5101 2993.2601    0.0015    0</span>
-<span class="co">#&gt; 4  2020-05-05          4    994.0180 3988.0240    0.0015    0</span>
-<span class="co">#&gt; 5  2020-05-06          5    992.5281 4981.2968    0.0015    0</span>
-<span class="co">#&gt; 6  2020-05-07          6    991.0404 5973.0808    0.0015    0</span>
-<span class="co">#&gt; 7  2020-05-08          7    989.5549 6963.3783    0.0015    0</span>
-<span class="co">#&gt; 8  2020-05-09          8    988.0717 7952.1914    0.0015    0</span>
-<span class="co">#&gt; 9  2020-05-10          9    986.5907 8939.5225    0.0015    0</span>
-<span class="co">#&gt; 10 2020-05-11         10    985.1119 9925.3736    0.0015    0</span>
+<span class="co">#&gt; 1  2020-05-13          1    998.5011  999.2504    0.0015    0</span>
+<span class="co">#&gt; 2  2020-05-14          2    997.0045 1997.0030    0.0015    0</span>
+<span class="co">#&gt; 3  2020-05-15          3    995.5101 2993.2601    0.0015    0</span>
+<span class="co">#&gt; 4  2020-05-16          4    994.0180 3988.0240    0.0015    0</span>
+<span class="co">#&gt; 5  2020-05-17          5    992.5281 4981.2968    0.0015    0</span>
+<span class="co">#&gt; 6  2020-05-18          6    991.0404 5973.0808    0.0015    0</span>
+<span class="co">#&gt; 7  2020-05-19          7    989.5549 6963.3783    0.0015    0</span>
+<span class="co">#&gt; 8  2020-05-20          8    988.0717 7952.1914    0.0015    0</span>
+<span class="co">#&gt; 9  2020-05-21          9    986.5907 8939.5225    0.0015    0</span>
+<span class="co">#&gt; 10 2020-05-22         10    985.1119 9925.3736    0.0015    0</span>
 
 <span class="no">p1</span> <span class="kw">&lt;-</span> <span class="no">decline_predict_exp</span> <span class="kw">%&gt;%</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="kw">x</span> <span class="kw">=</span> <span class="no">`Time_(day)`</span>, <span class="kw">y</span> <span class="kw">=</span> <span class="no">`q_(bbl/day)`</span>)) +
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span>(<span class="kw">color</span> <span class="kw">=</span> <span class="st">"green4"</span>) +
@@ -352,23 +352,23 @@
 <span class="co">#&gt; List of 3</span>
 <span class="co">#&gt;  $ t             : int [1:360] 1 2 3 4 5 6 7 8 9 10 ...</span>
 <span class="co">#&gt;  $ unit          : chr "month"</span>
-<span class="co">#&gt;  $ reference_date: Date[1:1], format: "2020-05-02"</span>
+<span class="co">#&gt;  $ reference_date: Date[1:1], format: "2020-05-13"</span>
 <span class="co">#&gt;  - attr(*, "class")= chr [1:2] "month" "time"</span>
 
 <span class="no">decline_predict_exp</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/decline_predict.html">decline_predict</a></span>(<span class="no">dcl_param_exp</span>, <span class="no">decline_time_exp</span>)
 
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">decline_predict_exp</span>, <span class="fl">10</span>)
 <span class="co">#&gt;          Date Time_(month) q_(m3/month)   Q_(m3) D_(1/month) Beta</span>
-<span class="co">#&gt; 1  2020-05-02            1      2060997  2092223        0.03    0</span>
-<span class="co">#&gt; 2  2020-06-01            2      2000085  4122612        0.03    0</span>
-<span class="co">#&gt; 3  2020-07-01            3      1940974  6092994        0.03    0</span>
-<span class="co">#&gt; 4  2020-08-01            4      1883609  8005142        0.03    0</span>
-<span class="co">#&gt; 5  2020-08-31            5      1827940  9860777        0.03    0</span>
-<span class="co">#&gt; 6  2020-10-01            6      1773916 11661570        0.03    0</span>
-<span class="co">#&gt; 7  2020-10-31            7      1721489 13409142        0.03    0</span>
-<span class="co">#&gt; 8  2020-11-30            8      1670612 15105065        0.03    0</span>
-<span class="co">#&gt; 9  2020-12-31            9      1621237 16750866        0.03    0</span>
-<span class="co">#&gt; 10 2021-01-30           10      1573323 18348027        0.03    0</span>
+<span class="co">#&gt; 1  2020-05-13            1      2060997  2092223        0.03    0</span>
+<span class="co">#&gt; 2  2020-06-12            2      2000085  4122612        0.03    0</span>
+<span class="co">#&gt; 3  2020-07-12            3      1940974  6092994        0.03    0</span>
+<span class="co">#&gt; 4  2020-08-12            4      1883609  8005142        0.03    0</span>
+<span class="co">#&gt; 5  2020-09-11            5      1827940  9860777        0.03    0</span>
+<span class="co">#&gt; 6  2020-10-12            6      1773916 11661570        0.03    0</span>
+<span class="co">#&gt; 7  2020-11-11            7      1721489 13409142        0.03    0</span>
+<span class="co">#&gt; 8  2020-12-11            8      1670612 15105065        0.03    0</span>
+<span class="co">#&gt; 9  2021-01-11            9      1621237 16750866        0.03    0</span>
+<span class="co">#&gt; 10 2021-02-10           10      1573323 18348027        0.03    0</span>
 <span class="co">#&gt;    time_abnd_(months) EUR_(m3)</span>
 <span class="co">#&gt; 1            143.9163 69848221</span>
 <span class="co">#&gt; 2            143.9163 69848221</span>
@@ -539,23 +539,23 @@
 <span class="co">#&gt; List of 3</span>
 <span class="co">#&gt;  $ t             : int [1:360] 1 2 3 4 5 6 7 8 9 10 ...</span>
 <span class="co">#&gt;  $ unit          : chr "month"</span>
-<span class="co">#&gt;  $ reference_date: Date[1:1], format: "2020-05-02"</span>
+<span class="co">#&gt;  $ reference_date: Date[1:1], format: "2020-05-13"</span>
 <span class="co">#&gt;  - attr(*, "class")= chr [1:2] "month" "time"</span>
 
 <span class="no">decline_predict_harm</span> <span class="kw">&lt;-</span> <span class="fu"><a href="../reference/decline_predict.html">decline_predict</a></span>(<span class="no">dcl_param_harm</span>, <span class="no">decline_time_harm</span>)
 
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">decline_predict_harm</span>, <span class="fl">10</span>)
 <span class="co">#&gt;          Date Time_(month) q_(m3/month)    Q_(m3) D_(1/month) Beta</span>
-<span class="co">#&gt; 1  2020-05-02            1     930.2326  964.2755  0.06976744    1</span>
-<span class="co">#&gt; 2  2020-06-01            2     869.5652 1863.4926  0.06521739    1</span>
-<span class="co">#&gt; 3  2020-07-01            3     816.3265 2705.8779  0.06122449    1</span>
-<span class="co">#&gt; 4  2020-08-01            4     769.2308 3498.1902  0.05769231    1</span>
-<span class="co">#&gt; 5  2020-08-31            5     727.2727 4246.0497  0.05454545    1</span>
-<span class="co">#&gt; 6  2020-10-01            6     689.6552 4954.1808  0.05172414    1</span>
-<span class="co">#&gt; 7  2020-10-31            7     655.7377 5626.5921  0.04918033    1</span>
-<span class="co">#&gt; 8  2020-11-30            8     625.0000 6266.7151  0.04687500    1</span>
-<span class="co">#&gt; 9  2020-12-31            9     597.0149 6877.5089  0.04477612    1</span>
-<span class="co">#&gt; 10 2021-01-30           10     571.4286 7461.5438  0.04285714    1</span>
+<span class="co">#&gt; 1  2020-05-13            1     930.2326  964.2755  0.06976744    1</span>
+<span class="co">#&gt; 2  2020-06-12            2     869.5652 1863.4926  0.06521739    1</span>
+<span class="co">#&gt; 3  2020-07-12            3     816.3265 2705.8779  0.06122449    1</span>
+<span class="co">#&gt; 4  2020-08-12            4     769.2308 3498.1902  0.05769231    1</span>
+<span class="co">#&gt; 5  2020-09-11            5     727.2727 4246.0497  0.05454545    1</span>
+<span class="co">#&gt; 6  2020-10-12            6     689.6552 4954.1808  0.05172414    1</span>
+<span class="co">#&gt; 7  2020-11-11            7     655.7377 5626.5921  0.04918033    1</span>
+<span class="co">#&gt; 8  2020-12-11            8     625.0000 6266.7151  0.04687500    1</span>
+<span class="co">#&gt; 9  2021-01-11            9     597.0149 6877.5089  0.04477612    1</span>
+<span class="co">#&gt; 10 2021-02-10           10     571.4286 7461.5438  0.04285714    1</span>
 <span class="co">#&gt;    time_abnd_(months) EUR_(m3)</span>
 <span class="co">#&gt; 1            253.3333  39943.1</span>
 <span class="co">#&gt; 2            253.3333  39943.1</span>

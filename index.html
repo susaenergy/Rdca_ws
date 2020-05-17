@@ -5,14 +5,14 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arps Decline Curve Analysis (DCA) Tools for Rate Analysis and Estimated Ultimate Recovery (EUR) Forecast • Rdca</title>
+<title>Arps DCA Tools for Rate Analysis and EUR Forecast • Rdca</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/lumen/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script><meta property="og:title" content="Arps Decline Curve Analysis (DCA) Tools for Rate Analysis and Estimated Ultimate Recovery (EUR) Forecast">
-<meta property="og:description" content="Arps models for production rate, cumulative production, nominal decline rate, the derivative of loss-ratio, and EUR predictions for oil and gas wells. Arps, J. J. (1945) &lt;10.2118/945228-G&gt;. Robertson, S. (1988) &lt;https://www.onepetro.org/general/SPE-18731-MS&gt;.">
+<script src="pkgdown.js"></script><meta property="og:title" content="Arps DCA Tools for Rate Analysis and EUR Forecast">
+<meta property="og:description" content="Arps Decline Curve Analysis (DCA) models for production rate, cumulative production, nominal decline rate, the derivative of loss-ratio, and estimated ultimate recovery (EUR) predictions for oil and gas wells. Arps, J. J. (1945) &lt;10.2118/945228-G&gt;. Robertson, S. (1988) &lt;https://www.onepetro.org/general/SPE-18731-MS&gt;.">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -111,23 +111,23 @@
 <span class="co">#&gt; List of 3</span>
 <span class="co">#&gt;  $ t             : int [1:7300] 1 2 3 4 5 6 7 8 9 10 ...</span>
 <span class="co">#&gt;  $ unit          : chr "day"</span>
-<span class="co">#&gt;  $ reference_date: Date[1:1], format: "2020-05-02"</span>
+<span class="co">#&gt;  $ reference_date: Date[1:1], format: "2020-05-13"</span>
 <span class="co">#&gt;  - attr(*, "class")= chr [1:2] "day" "time"</span>
 
 <span class="no">decline_predict_exp</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/decline_predict.html">decline_predict</a></span>(<span class="no">dcl_param_exp</span>, <span class="no">decline_time_exp</span>)
 
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">decline_predict_exp</span>, <span class="fl">10</span>)
 <span class="co">#&gt;          Date Time_(day) q_(bbl/day)   Q_(bbl) D_(1/day) Beta</span>
-<span class="co">#&gt; 1  2020-05-02          1    998.5011  999.2504    0.0015    0</span>
-<span class="co">#&gt; 2  2020-05-03          2    997.0045 1997.0030    0.0015    0</span>
-<span class="co">#&gt; 3  2020-05-04          3    995.5101 2993.2601    0.0015    0</span>
-<span class="co">#&gt; 4  2020-05-05          4    994.0180 3988.0240    0.0015    0</span>
-<span class="co">#&gt; 5  2020-05-06          5    992.5281 4981.2968    0.0015    0</span>
-<span class="co">#&gt; 6  2020-05-07          6    991.0404 5973.0808    0.0015    0</span>
-<span class="co">#&gt; 7  2020-05-08          7    989.5549 6963.3783    0.0015    0</span>
-<span class="co">#&gt; 8  2020-05-09          8    988.0717 7952.1914    0.0015    0</span>
-<span class="co">#&gt; 9  2020-05-10          9    986.5907 8939.5225    0.0015    0</span>
-<span class="co">#&gt; 10 2020-05-11         10    985.1119 9925.3736    0.0015    0</span></pre></div>
+<span class="co">#&gt; 1  2020-05-13          1    998.5011  999.2504    0.0015    0</span>
+<span class="co">#&gt; 2  2020-05-14          2    997.0045 1997.0030    0.0015    0</span>
+<span class="co">#&gt; 3  2020-05-15          3    995.5101 2993.2601    0.0015    0</span>
+<span class="co">#&gt; 4  2020-05-16          4    994.0180 3988.0240    0.0015    0</span>
+<span class="co">#&gt; 5  2020-05-17          5    992.5281 4981.2968    0.0015    0</span>
+<span class="co">#&gt; 6  2020-05-18          6    991.0404 5973.0808    0.0015    0</span>
+<span class="co">#&gt; 7  2020-05-19          7    989.5549 6963.3783    0.0015    0</span>
+<span class="co">#&gt; 8  2020-05-20          8    988.0717 7952.1914    0.0015    0</span>
+<span class="co">#&gt; 9  2020-05-21          9    986.5907 8939.5225    0.0015    0</span>
+<span class="co">#&gt; 10 2020-05-22         10    985.1119 9925.3736    0.0015    0</span></pre></div>
 </div>
 <div id="arps-harmonic-examples" class="section level3">
 <h3 class="hasAnchor">
@@ -171,23 +171,23 @@
 <span class="co">#&gt; List of 3</span>
 <span class="co">#&gt;  $ t             : int [1:360] 1 2 3 4 5 6 7 8 9 10 ...</span>
 <span class="co">#&gt;  $ unit          : chr "month"</span>
-<span class="co">#&gt;  $ reference_date: Date[1:1], format: "2020-05-02"</span>
+<span class="co">#&gt;  $ reference_date: Date[1:1], format: "2020-05-13"</span>
 <span class="co">#&gt;  - attr(*, "class")= chr [1:2] "month" "time"</span>
 
 <span class="no">decline_predict_harm</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/decline_predict.html">decline_predict</a></span>(<span class="no">dcl_param_harm</span>, <span class="no">decline_time_harm</span>)
 
 <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(<span class="no">decline_predict_harm</span>, <span class="fl">10</span>)
 <span class="co">#&gt;          Date Time_(month) q_(m3/month)    Q_(m3) D_(1/month) Beta</span>
-<span class="co">#&gt; 1  2020-05-02            1     930.2326  964.2755  0.06976744    1</span>
-<span class="co">#&gt; 2  2020-06-01            2     869.5652 1863.4926  0.06521739    1</span>
-<span class="co">#&gt; 3  2020-07-01            3     816.3265 2705.8779  0.06122449    1</span>
-<span class="co">#&gt; 4  2020-08-01            4     769.2308 3498.1902  0.05769231    1</span>
-<span class="co">#&gt; 5  2020-08-31            5     727.2727 4246.0497  0.05454545    1</span>
-<span class="co">#&gt; 6  2020-10-01            6     689.6552 4954.1808  0.05172414    1</span>
-<span class="co">#&gt; 7  2020-10-31            7     655.7377 5626.5921  0.04918033    1</span>
-<span class="co">#&gt; 8  2020-11-30            8     625.0000 6266.7151  0.04687500    1</span>
-<span class="co">#&gt; 9  2020-12-31            9     597.0149 6877.5089  0.04477612    1</span>
-<span class="co">#&gt; 10 2021-01-30           10     571.4286 7461.5438  0.04285714    1</span>
+<span class="co">#&gt; 1  2020-05-13            1     930.2326  964.2755  0.06976744    1</span>
+<span class="co">#&gt; 2  2020-06-12            2     869.5652 1863.4926  0.06521739    1</span>
+<span class="co">#&gt; 3  2020-07-12            3     816.3265 2705.8779  0.06122449    1</span>
+<span class="co">#&gt; 4  2020-08-12            4     769.2308 3498.1902  0.05769231    1</span>
+<span class="co">#&gt; 5  2020-09-11            5     727.2727 4246.0497  0.05454545    1</span>
+<span class="co">#&gt; 6  2020-10-12            6     689.6552 4954.1808  0.05172414    1</span>
+<span class="co">#&gt; 7  2020-11-11            7     655.7377 5626.5921  0.04918033    1</span>
+<span class="co">#&gt; 8  2020-12-11            8     625.0000 6266.7151  0.04687500    1</span>
+<span class="co">#&gt; 9  2021-01-11            9     597.0149 6877.5089  0.04477612    1</span>
+<span class="co">#&gt; 10 2021-02-10           10     571.4286 7461.5438  0.04285714    1</span>
 <span class="co">#&gt;    time_abnd_(months) EUR_(m3)</span>
 <span class="co">#&gt; 1            253.3333  39943.1</span>
 <span class="co">#&gt; 2            253.3333  39943.1</span>
